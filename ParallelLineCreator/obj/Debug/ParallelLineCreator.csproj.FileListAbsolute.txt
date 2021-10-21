@@ -1,0 +1,10 @@
+D:\Akaaam\ParallelLineCreator\ParallelLineCreator\bin\Debug\ParallelLineCreator.exe.config
+D:\Akaaam\ParallelLineCreator\ParallelLineCreator\bin\Debug\ParallelLineCreator.exe
+D:\Akaaam\ParallelLineCreator\ParallelLineCreator\bin\Debug\ParallelLineCreator.pdb
+D:\Akaaam\ParallelLineCreator\ParallelLineCreator\obj\Debug\ParallelLineCreator.csproj.AssemblyReference.cache
+D:\Akaaam\ParallelLineCreator\ParallelLineCreator\obj\Debug\ParallelLineCreator.Form1.resources
+D:\Akaaam\ParallelLineCreator\ParallelLineCreator\obj\Debug\ParallelLineCreator.Properties.Resources.resources
+D:\Akaaam\ParallelLineCreator\ParallelLineCreator\obj\Debug\ParallelLineCreator.csproj.GenerateResource.cache
+D:\Akaaam\ParallelLineCreator\ParallelLineCreator\obj\Debug\ParallelLineCreator.csproj.CoreCompileInputs.cache
+D:\Akaaam\ParallelLineCreator\ParallelLineCreator\obj\Debug\ParallelLineCreator.exe
+D:\Akaaam\ParallelLineCreator\ParallelLineCreator\obj\Debug\ParallelLineCreator.pdb
