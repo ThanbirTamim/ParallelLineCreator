@@ -54,8 +54,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="IndexableCyclicalLinkedList.cs" />
+    <Compile Include="Line.cs" />
+    <Compile Include="LineIntersection.cs" />
     <Compile Include="LineSegment.cs" />
     <Compile Include="MathHelper.cs" />
+    <Compile Include="ParallelPointClass.cs" />
+    <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Triangle.cs" />
