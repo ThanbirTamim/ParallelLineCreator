@@ -87,11 +87,53 @@ namespace ParallelLineCreator
                 var pjk2Y = oldY[k] + n2Y;
                 var _tup_3 = findIntesection(pij1X, pij1Y, pij2X, pij2Y, pjk1X, pjk1Y, pjk2X, pjk2Y);
                 var intersectX = _tup_3.Item1;
-                var intersetY = _tup_3.Item2;
-                //print(intersectX,intersetY)
-                newX.Add(intersectX);
-                newY.Add(intersetY);
+                var intersectY = _tup_3.Item2;
+                
+//                 newX.Add(intersectX);
+//                 newY.Add(intersectY);
+                
+                if (j == 0)
+                {
+                    List<PointF> line = new List<PointF>();
+                    line.Add(new PointF((float)oldX[j], (float)oldY[j]));
+                    line.Add(new PointF((float)oldX[j + 1], (float)oldY[j + 1]));
+                    var tuple = ParallelPoint(line, offset);
+                    newX.Add(tuple[0].X);
+                    newY.Add(tuple[0].Y);
+                }
+                else
+                {
+                    newX.Add(intersectX);
+                    newY.Add(intersetY);
+                }
             }
+            newX.RemoveAt(newX.Count - 1);
+            newY.RemoveAt(newY.Count - 1);
+
+            List<PointF> lineL = new List<PointF>();
+            lineL.Add(new PointF((float)oldX[oldX.Count - 2], (float)oldY[oldX.Count - 2]));
+            lineL.Add(new PointF((float)oldX[oldX.Count - 1], (float)oldY[oldX.Count - 1]));
+            var tupleL = ParallelPoint(lineL, offset);
+            newX.Add(tupleL[1].X);
+            newY.Add(tupleL[1].Y);
+        }
+        
+        public static List<PointF> ParallelPoint(List<PointF> line, double offsetPixels)
+        {
+            List<PointF> tuples = new List<PointF>();
+
+            double x1 = line[0].X, x2 = line[1].X, y1 = line[0].Y, y2 = line[1].Y; // The original line
+            var L = Math.Sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+
+            double x1p = x1 - offsetPixels * (y2 - y1) / L;
+            double x2p = x2 - offsetPixels * (y2 - y1) / L;
+            double y1p = y1 - offsetPixels * (x1 - x2) / L;
+            double y2p = y2 - offsetPixels * (x1 - x2) / L;
+
+            tuples.Add(new PointF((float)x1p, (float)y1p));
+            tuples.Add(new PointF((float)x2p, (float)y2p));
+
+            return tuples;
         }
     }
 }
