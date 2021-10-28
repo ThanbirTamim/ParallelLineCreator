@@ -35,7 +35,8 @@ and Converted into C#.
 
             [Note: You need only ParallelPointClass Class. Rest of class you need not to use. Those are used to create face in OBJ file. You can go through if you interested]
 
-Check It Out And Happy Coding!!! 
-:-)
+## Technique 1
 ![CHEESE!](test2.png)
+
+## Technique 2
 ![CHEESE!](test.png)
